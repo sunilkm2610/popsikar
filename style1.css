@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/* home page */
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("2.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+.nav-bar{
+    width: 85%;
+    margin: auto;
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+       
+}
+.nav-bar h3{
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+}
+.nav-bar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 2rem;
+    font-size: 3rem;
+    position: relative;
+}
+.nav-bar ul li::after{
+    content: '';
+    height: 0.3rem;
+    width: 0%;
+    background:#009688;
+    position: absolute;
+    left:0;
+    bottom: -1rem;
+    transition: 0.5s;
+}
+.nav-bar ul li:hover::after{
+    width: 100%;
+
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.home-content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    /* font-size: 4rem; */
+}
+.home-content h1{
+    font-size: 4rem;
+}
+.home-content p{
+    font-size: 1.5rem;
+    margin: 2rem;
+    letter-spacing: 1rem;
+    line-height: 2.2rem;
+}
+.home-content button{
+    width: 20rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin: 2rem 1rem;
+    border-radius: 2.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: 0.2rem solid #009688;
+    background:transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.home-content span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background:#009688;
+    border-radius: 2.5rem;
+    z-index: -1;
+    transition: 0.5s;
+}
+.home-content button:hover span{
+    width: 100%;
+}
+.home-content button:hover{
+    border:none;
+}
+/* end of home page */
+
+/* footer start */
+footer{
+    /* position:absolute; */
+    width: 100%;
+    background:#111;
+    color:white;
+    font-size: 13rem;
+}
+.main-container{
+    display: flex;
+
+}
+.main-container .box{
+    flex-basis: 50%;
+    padding: 1rem 2rem;
+}
+.box h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.box .content{
+    margin: 2rem 0 0 0;
+    text-align: justify;
+}
+.left .content .social{
+    margin: 2rem 0 0 0;
+}
+.left .content .social a{
+    padding: 0 0.2rem;
+}
+.left .content .social a span{
+    height: 4rem;
+    width: 4rem;
+    background: #1a1a1a;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    color: white;
+    transition: 0.3s;
+}
+.left .content .social a span:hover{
+    background: #009688;
+}
+.center .content .fas{
+    font-size: 1.8rem;
+    background:#1a1a1a;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+    /* margin: 0.5rem; */
+}
+.center .content .fas:hover{
+    background: #009688;
+    
+}
+.center .content .text{
+    font-size: 2rem;
+    font-weight: 500;
+    padding-left: 1rem;
+}
+.center .content .phone{
+    margin: 1rem 0;
+}
+.right form .msg{
+    margin-top: 1rem;
+
+
+}
+.right form .text{
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: #656565;
+}
+.right form input, .right form textarea{
+    width:100%;
+    font-size: 1.5rem;
+    background:#151515;
+    padding-left: 1rem;
+    border: 0.1rem solid #222222;
+    color:white;
+}
+.right form .btn{
+    margin-top: 1rem;
+}
+.right form .btn button{
+    height: 4rem;
+    width: 100%;
+    border: 0.1rem solid #009688;
+    outline: none;
+    background:transparent;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.right form .btn button:hover{
+    background:#009688
+}
+.right form input:hover, .right form textarea:hover{
+    outline-color: #009688;
+}
+.right form input{
+    height: 3.5rem;
+}
+.bottom center{
+    font-size: 2.4rem;
+    padding: 0.5rem;
+    background: #151515;
+}
+.bottom center span{
+    color:#656565
+}
+.bottom center span a{
+    color: #009688;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.bottom center span a:hover{
+    text-decoration:underline ;
+}
+.box .content{
+    position: relative;
+    margin: 2rem 0 0 0;
+}
+.box .content::before{
+    position: absolute;
+    content:'';
+    height: 0.2rem;
+    width: 100%;
+    background: #1a1a1a;; 
+    top:-1rem;
+}
+.box .content::after{
+    position: absolute;
+    content: ' ';
+    height:0.2rem ;
+    width: 20%;
+    background:#009688;
+    top:-1rem;
+}
+/* footer end */
+/* galley start */
+#carouselExampleControls{
+    width: 100%;
+    height: 100vh;
+}
+#carouselExampleControls img{
+    height: 100%;
+    width: 100%;
+}
+.gallery-container{
+    width: 100%;
+    height: 100vh;
+    background:#009688;
+}
+/* gallery end */
+@media  screen and (max-width:900px) {
+    footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .main-container{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-container .box{
+        margin: 0.5rem 0;
+    }
+}
+
+
+@media (max-width:800px) {
+    html{
+        font-size: 50%;
+    }   
+}
+@media (max-width:700px) {
+    html{
+        font-size: 45%;
+    }   
+}
+@media (max-width:600px) {
+    html{
+        font-size: 40%;
+    }
+    
+}
+@media (max-width:500px) {
+    html{
+        font-size: 30%;
+    }
+    
+}
+@media (max-width:400px) {
+    html{
+        font-size: 20%;
+    }   
+}
+@media (max-width:300px) {
+    html{
+        font-size: 20%;
+    }   
+}
+@media (max-width:250px) {
+    html{
+        font-size: 20%;
+    }   
+}

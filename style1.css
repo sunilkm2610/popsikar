@@ -22,7 +22,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    /* position: fixed; */
        
+}
+.sticky{
+    background:black;
+    position: fixed;
+    /* margin: ; */
+    padding: 3.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    width: 100%;
+    height: 5rem;
 }
 .nav-bar h3{
     font-size: 3rem;
@@ -372,14 +385,62 @@ footer{
     overflow: hidden;
 }
 .gallery-container h2{
-    padding-top: 5rem;
+    padding-top: 8rem;
     text-align: center;
     color: white;
-    font-size: 5rem;
     text-transform: uppercase;
-    font-weight: 600;
+    font-size: 3rem;
 }
 /* gallery end */
+/* service style start */
+.services{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-direction: column;
+    font-size: 3rem;
+    text-transform: uppercase;
+    
+}
+.service-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    background-color: #E8F0F2;
+    width: 80vw;
+    box-shadow: 0px 0px 23px 3px rgba(0,0,0,0.98);
+    -webkit-box-shadow: 0px 0px 23px 3px rgba(0,0,0,0.98);
+    -moz-box-shadow: 0px 0px 23px 3px rgba(0,0,0,0.98);
+    border-radius: 1rem;
+}
+.service-word{
+    flex-basis: 60%;
+    font-size: 4rem;
+    height: 30rem;
+    margin-left: 3rem;
+    text-align: justify;
+    margin: 4rem;
+}
+.service-word ul{
+    font-size: 3.5rem;
+}
+.sevice-img{
+    flex-basis: 40%;
+    height: 42rem;
+    width: 30rem;
+    background: url("8.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.service-heading{
+    margin-bottom: 3rem;
+}
+
+/* service style end */
 @media  screen and (max-width:900px) {
     footer{
         position: relative;
@@ -393,12 +454,53 @@ footer{
         margin: 0.5rem 0;
     }
 }
+@media (max-width:900px){
+    html{
+        font-size: 50%;
+    }
+    .service-content{
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+        flex-direction: column;
+        height: 50vh;
+        position: relative;
+        
 
+    }
+    .sevice-img{
+        
+        height: 20vh;
+        width: 20vh;
+        background: url("8.jpg");
+        background-size: cover;
+        background-position: center;
+        /* margin-bottom: 20rem; */
+        position:absolute;
+        top: 200px;
+        /* left: 70%; */
+    }
+    .service-word{
+        
+        position: absolute;
+        font-size: 4rem;
+        top:0;
+        height: 25%;
+        
+        margin-left: 3rem;
+        text-align: justify;
+        margin: 4rem;
+        /* padding-top: 20rem; */
+    } 
+
+}
 
 @media (max-width:800px) {
     html{
         font-size: 50%;
-    }   
+    } 
+    
+     
 }
 @media (max-width:700px) {
     html{
@@ -409,6 +511,7 @@ footer{
     html{
         font-size: 40%;
     }
+    
     
 }
 @media (max-width:500px) {
